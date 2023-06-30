@@ -584,10 +584,15 @@
 				</defs>
 			</svg>
 		</figure>
+
 		<h1 class="h1">The one stop shop for all your KitchenAid mixer needs</h1>
 		<div class="card p-4 bg-initial card-hover overflow-hidden">
 			<header>
-				<img class="bg-black/50 w-full" src="/bearing_bracket.jpg" alt="KitchenAid Mixer" />
+				<img
+					class="bg-black/50"
+					src="/Product_Pictures/20201007_140555.jpg"
+					alt="KitchenAid Mixer"
+				/>
 			</header>
 			<p>With supporting text below as a natural lead-in to additional content.</p>
 			<!-- create href to routes/shop/+page.svelte -->
