@@ -20,7 +20,7 @@
 			</a>
 		</svelte:fragment>
 		<svelte:fragment slot="trail">
-			<a class="btn btn-sm variant-ghost-surface" href="/shop" target="_self" rel="noreferrer">
+			<a class="btn btn-sm variant-ghost-surface" href="../shop" target="_self" rel="noreferrer">
 				Shop
 			</a>
 			<a

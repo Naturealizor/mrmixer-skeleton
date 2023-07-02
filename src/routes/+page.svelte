@@ -1,12 +1,20 @@
 <script>
-	import ProductCard from '$lib/ProductCard.svelte';
+
+	
 </script>
+
+<!-- add a svelte head element for SEO -->
+	<svelte:head>
+	<title>Shop Page</title>
+	<meta name="shop" content="This is the shop home page" />
+	</svelte:head>
+
 
 <div class="container h-full mt-50 mx-auto flex justify-center items-start mt-10">
 	<div class="space-y-10 text-center flex flex-col items-center">
 		<!-- Animated Logo -->
 		<figure>
-			<!-- <section class="img-bg" /> -->
+			<section class="img-bg" />
 			<svg
 				width="194"
 				height="202"

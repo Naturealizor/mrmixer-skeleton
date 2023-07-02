@@ -1,40 +1,46 @@
-<script>
-	import { each } from 'svelte/internal';
+<script lang="ts">
+	import { cartItems, addToCart, removeFromCart } from "../cart";
+	import { get } from "svelte/store";
+	export let products : Products = {
+		id: "",
+		name: "",
+		description: "",
+		price: "",
+		image: "/Product_Pictures/Gallery_Pic (2).jpg"
+	};
+	// let id = get(Products.id);
+	let cart = get(cartItems); // [ { id: "1", quantity: 1 }, { id: "2", quantity: 1 }]
+	let cartItemIndex = cart.find((item) => item.id === products.id)?.quantity || 0; // Not sure if this is needed
+	let cartProduct = cart[cartItemIndex]; // { id: "1", quantity: 1 }
+	cartItems.subscribe((newCartValue) => {
+		cart = newCartValue;
+		cartItemIndex = cart.findIndex((item) => item.id === products.id);
+		cartProduct = cart[cartItemIndex];
+		console.log(cart);
+	});
+	
 
-	let products = [
-		{
-			name: 'product Name',
-			description: 'product Description',
-			price: 'product Price',
-			image: 'product Image'
-		},
-		{
-			name: 'product Name 2',
-			description: 'product Description 2',
-			price: 'product Price 2',
-			image: 'product Image 2'
-		}
-	];
+
+
+	
+
 </script>
 
-<!-- each loop -->
-{#each products as product}
-	<div class="grid">
-		<div class="card col-span-3">
-			<header class="card-header">
-				<h2 class="card-header-title">
-					{product.name}
-				</h2>
-			</header>
-			<div class="card-body px-4">
-				<div class="card-image">
-					<img src={product.image} alt={product.name} />
-				</div>
-				<div class="card-content">
-					<p class="card-text">{product.description}</p>
-					<p class="card-text">Price: {product.price}</p>
-				</div>
+
+
+<div class="container grid col-span-5 m-5">
+	<div class="card">
+		<header>
+			<div class="card-image">
+				<img src="{products.image}" alt="KitchenAid mixer">
 			</div>
+		</header>
+		<div class="card-content">
+			<h3 class="card-title">{products.name}</h3>
+			<p class="card-description">{products.description}</p>
+			<p class="card-price">{products.price}</p>
+			<button on:click={() => addToCart(products.id)}>Add to Cart</button>
+			<button class="btn variant-filled-surface" on:click={() => removeFromCart(products.id)}>Remove from Cart</button>
 		</div>
 	</div>
-{/each}
+</div>
