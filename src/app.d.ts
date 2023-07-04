@@ -11,7 +11,7 @@ declare namespace App {
 declare class Products {
 	id: string //Stripe id
 	name: string //Name of product
-	price: string //Price of product
+	price: number //Price of product
 	description: string //Description of product
 	image: string //Image of product
 	static id: Readable<unknown>;
