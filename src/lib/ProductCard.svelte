@@ -3,13 +3,13 @@
 	import { cartItems, addToCart, removeFromCart } from "../cart";
 	// Import get from svelte/store
 	import { get } from "svelte/store";
-	// Export products as an object with properties id, name, description, price and image
+	// Export products as an object with properties id, name, description, price and image_URL
 	export let products : Products = {
 		id: "",
 		name: "",
 		description: "",
 		price: 0,
-		image: ""
+		image_url: ""
 	};
 	// Get the value of the product's id from the store
 	// let id = get(Products.id);
@@ -48,9 +48,9 @@
 		<div class=" card-hover card flex m-5 p-5">
 			<header>
 				<div class="card-image p-2">
-					<!-- create a new img the same as below, but with a small image -->
+					<!-- create a new img the same as below, but with a small image_URL -->
 					
-					<img src="{products.image}" alt="KitchenAid mixer" style="max-width: 500px; max-height: 300px;">
+					<img src="{products.image_url}" alt="KitchenAid mixer" style="max-width: 500px; max-height: 300px;">
 				</div>
 			</header>
 			<div class="card-content">

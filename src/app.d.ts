@@ -13,7 +13,7 @@ declare class Products {
 	name: string //Name of product
 	price: number //Price of product
 	description: string //Description of product
-	image: string //Image of product
+	image_url: string //Image of product
 	static id: Readable<unknown>;
 };
 
