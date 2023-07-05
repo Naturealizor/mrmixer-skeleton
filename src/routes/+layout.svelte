@@ -11,10 +11,18 @@
 	let currentTile: number = 0;
 </script>
 
+<!-- create sveltekit title for seo -->
+<svelte:head>
+	<title>Mr. Mixer</title>
+</svelte:head>
+
+
 <!-- App Shell -->
 <AppShell>
-	<AppBar>
-		<svelte:fragment slot="lead">
+	<div class="flex flex-col min-h-screen">
+		<AppBar>
+			<svelte:fragment slot="lead">
+			<main class="flex-grow">
 			<a href="/" class="btn hover:variant-soft">
 				<strong class="text-xl uppercase">Mr. Mixer</strong>
 			</a>
@@ -25,11 +33,11 @@
 			</a>
 			<a
 				class="btn btn-sm variant-ghost-surface"
-				href="https://www.youtube.com/@MrMixer316"
-				target="_blank"
+				href="../shipping"
+				target="_self"
 				rel="noreferrer"
 			>
-				YouTube
+				Shipping
 			</a>
 			<a
 				class="btn btn-sm variant-ghost-surface"
@@ -58,25 +66,34 @@
 		</svelte:fragment>
 	</AppBar>
 
-	<!-- <AppRail>
-		<svelte:fragment slot="lead">
-			<AppRailAnchor href="/">(icon)</AppRailAnchor>
-		</svelte:fragment>
-		<AppRailTile bind:group={currentTile} name="tile-1" value={0} title="tile-1">
-			<svelte:fragment slot="lead">(icon)</svelte:fragment>
-			<span>Tile 1</span>
-		</AppRailTile>
-		<AppRailTile bind:group={currentTile} name="tile-2" value={1} title="tile-2">
-			<svelte:fragment slot="lead">(icon)</svelte:fragment>
-			<span>Tile 2</span>
-		</AppRailTile>
-		<svelte:fragment slot="trail">
-			<AppRailAnchor href="/" target="_blank" title="Account">(icon)</AppRailAnchor>
-		</svelte:fragment>
-	</AppRail> -->
-	<!-- App Rail -->
-
-	<!-- Page Route Content -->
-
 	<slot />
+	
+
+		<footer class="bg-gray-200 text-gray-800 py-4">
+			<a
+			class="btn btn-sm variant-ghost-surface"
+			href="https://www.tiktok.com/@mr..mixer"
+			target="_blank"
+			rel="noreferrer"
+			>
+			TikTok
+		</a>
+		<a
+			class="btn btn-sm variant-ghost-surface"
+			href="https://www.facebook.com/Mrmixer316"
+			target="_blank"
+			rel="noreferrer"
+			>
+			Facebook
+		</a>
+		<a
+			class="btn btn-sm variant-ghost-surface"
+			href="https://www.instagram.com/mr._mixer_/"
+			target="_blank"
+			rel="noreferrer"
+			>
+			Instagram
+		</a>
+		</footer>
 </AppShell>
+
