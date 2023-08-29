@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@floating-ui/dom': ^1.4.3
   '@prisma/client': 4.16.2
-  '@skeletonlabs/skeleton': ^1.8.0
+  '@skeletonlabs/skeleton': ^2.0.0
   '@sveltejs/adapter-auto': ^2.1.0
   '@sveltejs/kit': ^1.21.0
   '@tailwindcss/forms': ^0.5.3
@@ -32,7 +32,7 @@ dependencies:
 
 devDependencies:
   '@floating-ui/dom': 1.4.3
-  '@skeletonlabs/skeleton': 1.8.0
+  '@skeletonlabs/skeleton': 2.0.0_svelte@4.0.1
   '@sveltejs/adapter-auto': 2.1.0_@sveltejs+kit@1.21.0
   '@sveltejs/kit': 1.21.0_svelte@4.0.1+vite@4.3.9
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.3.2
@@ -425,11 +425,13 @@ packages:
     resolution: {integrity: sha512-vx1nxVvN4QeT/cepQce68deh/Turxy5Mr+4L4zClFuK1GlxN3+ivxfuv+ej/gvidWn1cE1uAhW7ALLNlYbRUAw==}
     requiresBuild: true
 
-  /@skeletonlabs/skeleton/1.8.0:
-    resolution: {integrity: sha512-dO4ukU34MGUY1yA1Gln+YUFEEew25AHm6GMpbzCOX8p8b9NmVBWiSuF3me9jnbrV15TGJxmUGzdiRN/70b4KIg==}
+  /@skeletonlabs/skeleton/2.0.0_svelte@4.0.1:
+    resolution: {integrity: sha512-8SaDK3kEUU57cSb/5a984EbINgnOPzShlkwPkduAhqc71SEqhRvx+RlLEpe1174NAYi00oi//LguIAYuVrSfBA==}
+    peerDependencies:
+      svelte: ^3.56.0 || ^4.0.0
     dependencies:
       esm-env: 1.0.0
-      svelte: 3.58.0
+      svelte: 4.0.1
     dev: true
 
   /@sveltejs/adapter-auto/2.1.0_@sveltejs+kit@1.21.0:
@@ -2230,11 +2232,6 @@ packages:
       strip-indent: 3.0.0
       svelte: 4.0.1
       typescript: 5.1.6
-    dev: true
-
-  /svelte/3.58.0:
-    resolution: {integrity: sha512-brIBNNB76mXFmU/Kerm4wFnkskBbluBDCjx/8TcpYRb298Yh2dztS2kQ6bhtjMcvUhd5ynClfwpz5h2gnzdQ1A==}
-    engines: {node: '>= 8'}
     dev: true
 
   /svelte/4.0.1:
