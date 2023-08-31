@@ -594,11 +594,11 @@
 		</figure>
 
 		<h1 class="h1">The one stop shop for all your KitchenAid mixer needs</h1>
-		<div class="card p-4 bg-initial card-hover overflow-hidden">
+		<div class="card scale-75 p-4 bg-initial card-hover overflow-hidden">
 			<header>
 				<img
-					class="bg-black/50"
-					src="/Product_Pictures/20201007_140555.jpg"
+					class="bg-black/50 "
+					src="/Product_Pictures/Gallery_Pic (8).jpg"
 					alt="KitchenAid Mixer"
 				/>
 			</header>

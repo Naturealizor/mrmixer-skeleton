@@ -69,7 +69,7 @@
 	<slot />
 	
 
-		<footer class="bg-gray-200 text-gray-800 py-4">
+		<!-- <footer class="bg-gray-200 text-gray-800 py-4">
 			<a
 			class="btn btn-sm variant-ghost-surface"
 			href="https://www.tiktok.com/@mr..mixer"
@@ -94,6 +94,6 @@
 			>
 			Instagram
 		</a>
-		</footer>
+		</footer> -->
 </AppShell>
 
