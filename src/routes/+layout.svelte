@@ -1,9 +1,4 @@
 <script lang="ts">
-	// The ordering of these imports is critical to your app working properly
-	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
-	// If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
-	import '@skeletonlabs/skeleton/styles/skeleton.css';
-	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 	import { AppShell, AppBar, AppRail, AppRailTile, AppRailAnchor } from '@skeletonlabs/skeleton';
 	import { page } from '$app/stores';
@@ -19,6 +14,7 @@
 
 <!-- App Shell -->
 <AppShell>
+	<!-- Home button, Mr Mixer title -->
 	<div class="flex flex-col min-h-screen">
 		<AppBar>
 			<svelte:fragment slot="lead">
@@ -27,8 +23,11 @@
 				<strong class="text-xl uppercase">Mr. Mixer</strong>
 			</a>
 		</svelte:fragment>
+
+		<!-- Desktop Nav Menu -->
 		<svelte:fragment slot="trail">
-			<a class="btn btn-sm variant-ghost-surface" href="../shop" target="_self" rel="noreferrer">
+		<div class="desktop-nav  sm:hidden">
+			<a class="btn btn-sm variant-ghost-surface " href="../shop" target="_self" rel="noreferrer">
 				Shop
 			</a>
 			<a
@@ -64,6 +63,7 @@
 				Instagram
 			</a>
 		</svelte:fragment>
+		
 	</AppBar>
 
 	<slot />

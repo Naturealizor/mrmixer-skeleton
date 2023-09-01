@@ -1,18 +1,31 @@
 <script>
+import Logo from '$lib/logo.svg';
+import { fade, fly } from 'svelte/transition';
+import { onMount } from 'svelte';
+let visible = false;
 
-	
+onMount(() => {
+	visible = true;
+});
+
 </script>
 
 <!-- add a svelte head element for SEO -->
 	<svelte:head>
-	<title>Shop Page</title>
-	<meta name="shop" content="This is the shop home page" />
+	<title>Home Page</title>
+	<meta name="home" content="This is the home page" />
 	</svelte:head>
 
 
-<div class="container h-full mt-50 mx-auto flex justify-center items-start mt-10">
+<div class="container h-full mt-50 mx-auto flex justify-center items-start mt-10 ">
 	<div class="space-y-10 text-center flex flex-col items-center">
 		<!-- Animated Logo -->
+		<!-- <Logo /> -->
+		
+
+	
+
+		
 		<figure>
 			<section class="img-bg" />
 			<svg
@@ -22,6 +35,7 @@
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
 				xmlns:xlink="http://www.w3.org/1999/xlink"
+				class=" scale-125"
 			>
 				<g clip-path="url(#clip0_806_17)">
 					<path
@@ -593,7 +607,13 @@
 			</svg>
 		</figure>
 
-		<h1 class="h1">The one stop shop for all your KitchenAid mixer needs</h1>
+		<!-- transition:fade={{ y: 100, duration: 5000}} -->
+		<br>
+		{#if visible}
+		<h1 class="h1 capitalize m-5" in:fly={{ y: 25, duration: 1500, delay: 200 }}  >The one stop shop for all your KitchenAid mixer needs</h1>
+		{/if}
+		
+	<div class="grid grid-cols-3 md:grid-cols-1">
 		<div class="card scale-75 p-4 bg-initial card-hover overflow-hidden">
 			<header>
 				<img
@@ -603,11 +623,38 @@
 				/>
 			</header>
 			<p>With supporting text below as a natural lead-in to additional content.</p>
-			<!-- create href to routes/shop/+page.svelte -->
+			create href to routes/shop/+page.svelte
+
+			<a href="../shop" class="btn btn-primary">Go somewhere</a>
+		</div>
+		<div class="card scale-75 p-4 bg-initial card-hover overflow-hidden">
+			<header>
+				<img
+					class="bg-black/50 "
+					src="/Product_Pictures/Gallery_Pic (8).jpg"
+					alt="KitchenAid Mixer"
+				/>
+			</header>
+			<p>With supporting text below as a natural lead-in to additional content.</p>
+			create href to routes/shop/+page.svelte
+
+			<a href="../shop" class="btn btn-primary">Go somewhere</a>
+		</div>
+		<div class="card scale-75 p-4 bg-initial card-hover overflow-hidden">
+			<header>
+				<img
+					class="bg-black/50 "
+					src="/Product_Pictures/Gallery_Pic (8).jpg"
+					alt="KitchenAid Mixer"
+				/>
+			</header>
+			<p>With supporting text below as a natural lead-in to additional content.</p>
+			create href to routes/shop/+page.svelte
 
 			<a href="../shop" class="btn btn-primary">Go somewhere</a>
 		</div>
 	</div>
+</div>
 </div>
 
 <style lang="postcss">
