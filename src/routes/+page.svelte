@@ -1,5 +1,4 @@
 <script>
-import Logo from '$lib/logo.svg';
 import { fade, fly } from 'svelte/transition';
 import { onMount } from 'svelte';
 let visible = false;
@@ -19,12 +18,7 @@ onMount(() => {
 
 <div class="container h-full mt-50 mx-auto flex justify-center items-start mt-10 ">
 	<div class="space-y-10 text-center flex flex-col items-center">
-		<!-- Animated Logo -->
-		<!-- <Logo /> -->
 		
-
-	
-
 		
 		<figure>
 			<section class="img-bg" />
