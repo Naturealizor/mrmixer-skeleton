@@ -55,7 +55,7 @@
 	"dependencies": {
 		"@prisma/client": "5.2.0",
 		"contentful": "10.5.1",
-		"pnpm": "7.5.2"
+		"pnpm": "7.33.6"
 	},
 	"prisma": {
 		"seed": "ts-node prisma/seed.ts"
