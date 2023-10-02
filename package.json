@@ -54,7 +54,7 @@
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "5.2.0",
-		"contentful": "10.5.1",
+		"contentful": "10.6.1",
 		"pnpm": "7.5.2"
 	},
 	"prisma": {

@@ -14,7 +14,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 6.5.0
   '@typescript-eslint/parser': 6.5.0
   autoprefixer: 10.4.15
-  contentful: 10.5.1
+  contentful: 10.6.1
   eslint: 8.48.0
   eslint-config-prettier: 9.0.0
   eslint-plugin-svelte: 2.33.0
@@ -33,7 +33,7 @@ specifiers:
 
 dependencies:
   '@prisma/client': 5.2.0_prisma@5.2.0
-  contentful: 10.5.1
+  contentful: 10.6.1
   pnpm: 7.5.2
 
 devDependencies:
@@ -968,8 +968,8 @@ packages:
       p-throttle: 4.1.1
     dev: false
 
-  /contentful/10.5.1:
-    resolution: {integrity: sha512-1u1bMTruD1CJiCk5pBIn+ixMTSSl51AD4f2yXZ9G0uh3x+K3rasCojclM/GO9gF4WcNzdYe1ph+ILeOaEyTW3A==}
+  /contentful/10.6.1:
+    resolution: {integrity: sha512-ZiMOVx68KD+C5f4EIjqDo1yvZzpokOIwG4X0+LZ/Eco9c2S5qzT889mbDDay3Y8NB3OfAdS7s6T4rr1p8b7bDA==}
     engines: {node: '>=12'}
     dependencies:
       '@contentful/rich-text-types': 16.2.1
